@@ -25,4 +25,9 @@ class ArtistsController < ApplicationController
     redirect_to artist_path(@artist)
   end
 
-end
+  private
+
+ 	def post_params(*args)
+ 	  params.require(:artist).permit(*args)
+ 	end
+ end
