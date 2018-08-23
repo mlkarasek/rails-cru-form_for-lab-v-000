@@ -28,11 +28,4 @@ class SongsController < ApplicationController
     @song.update(post_params(:name, :bio))
     redirect_to song_path(@song)
   end
-
-private
-
-  def song_params(*args)
-    params.require(:song).permit(*args)
-  end
-
 end
