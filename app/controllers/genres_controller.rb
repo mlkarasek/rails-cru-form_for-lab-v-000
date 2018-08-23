@@ -26,11 +26,4 @@ class GenresController < ApplicationController
     @genre.update(post_params(:name))
     redirect_to genre_path(@genre)
   end
-
-private
-
-  def genre_params(*args)
-    params.require(:genre).permit(*args)
-  end
-
 end
